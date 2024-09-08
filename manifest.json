@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "JScroller",
+    "description": "Auto scrolls the page for you, so you can relax.",
+    "version": "0.1",
+    "action": {
+        "default_title": "Click to show controls."
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/settings.js", "js/content.js"],
+            "css": ["css/content.css"]            
+        }        
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}

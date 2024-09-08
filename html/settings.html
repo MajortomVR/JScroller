@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JScroller - Settings</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <script src="../js/settings.js"></script>
+    <script src="../js/settings-menu.js"></script>
+</head>
+
+<body>    
+    <h2>JScroller - Settings</h2>
+    
+    <div class="container">
+        <div style="margin-bottom: 30px;"></div>
+
+        <!-- Scroll Interval -->        
+        <fieldset>
+            <legend>Scroll Interval:</legend>
+            <label>
+                <span id="scroll-interval-value">2.5 Seconds</span>
+                <input id="scroll-interval" type="range" step="0.5" min="0.5" max="5.0" value="2.0" />                
+            </label>
+        </fieldset>
+        
+        <!-- Scroll Distance -->
+        <fieldset>
+            <legend>Scroll Distance:</legend>
+            <label>
+                <span id="scroll-distance-value">50%</span>
+                <input id="scroll-distance" type="range" step="5" min="5" max="100" value="80" />
+            </label>
+        </fieldset>
+
+        <!-- Scroll Speed -->
+        <fieldset>
+            <legend>Scroll Speed:</legend>
+            <label>
+                <span id="scroll-speed-value">0.2 Seconds</span>
+                <input id="scroll-speed" type="range" step="0.1" min="0.1" max="1.0" value="0.2" />
+            </label>
+        </fieldset>
+
+    </div>
+    
+    
+    <div class="button-group">
+        <button id="button-reset">
+            Reset to Defaults
+        </button>
+    </div>
+</body>
+
+</html>
