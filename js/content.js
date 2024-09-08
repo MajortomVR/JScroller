@@ -130,10 +130,9 @@ function smoothScroll() {
         smoothInterval = null;
     }
 
-    const lastPositionY = window.scrollY;
     window.scrollBy(0, distance);
 
-    if (window.scrollY === lastPositionY && distance >= 1) {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
         console.log("Scrolling stopped -> end reached!");
         stopScrolling();
     }
