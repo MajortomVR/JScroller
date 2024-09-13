@@ -1,4 +1,4 @@
-# JScroller
+# ![JScroller Icon](icon/icon_24.png) JScroller
 
 
 ## Description:
