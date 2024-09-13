@@ -1,5 +1,6 @@
 // Create a settings entry in the context menu
 chrome.runtime.onInstalled.addListener(() => {
+    console.log('INSTALL');
     chrome.contextMenus.create({
         id: 'settings-menu',
         title: 'Settings',
@@ -20,6 +21,14 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 
 // On left click show the button on the page
-chrome.action.onClicked.addListener((tab) => {
-    chrome.tabs.sendMessage(tab.id, { action: 'showButton' });
+chrome.action.onClicked.addListener((tab) => {    
+    if (!tab.url.startsWith('chrome')) {
+        chrome.tabs.sendMessage(tab.id, { action: 'showButton' }, (response) => {
+            if (chrome.runtime.lastError) {
+                console.log('Error sending message:', chrome.runtime.lastError.message);
+            } else if (!response) {
+                console.log('No response from content script');
+            }
+        });
+    }    
 });
