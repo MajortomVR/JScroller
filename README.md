@@ -1,6 +1,9 @@
 # ![JScroller Icon](icon/icon_24.png) JScroller
 
 
+![preview](https://github.com/user-attachments/assets/a6909c49-263d-4560-b9da-245b5065f448)
+
+
 ## Description:
 JScroller is a Chrome extension that simplifies browsing long web pages by automatically scrolling for you.
 
