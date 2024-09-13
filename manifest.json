@@ -23,5 +23,11 @@
     },
     "host_permissions": [
         "<all_urls>"
-    ]
+    ],
+    "icons": {
+        "128": "icon/icon_128.png",
+        "48": "icon/icon_48.png",
+        "32": "icon/icon_32.png",
+        "16": "icon/icon_16.png"
+    }
 }
